@@ -1,0 +1,44 @@
+[2018-06-02T16:27:33.677] [ERROR] error - error 2018-06-02T16:27:33+08:00 POST /api/transferOwnership?coinName=UVS {"userId":""} {"coinName":"UVS"} {"data":{"fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","newOwnerAddress":"0x446cc2f95af27a663ca0cf28c9cb21dd335a6215"}} {} {"status":500,"message":"Invalid number of parameters for \"transfer\". Got 1 expected 2!"} 2018-06-02T16:27:33+08:00 undefinedms
+
+[2018-06-02T16:27:33.679] [ERROR] error - error 2018-06-02T16:27:33+08:00 POST /api/transferOwnership?coinName=UVS {"userId":""} {"coinName":"UVS"} {"data":{"fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","newOwnerAddress":"0x446cc2f95af27a663ca0cf28c9cb21dd335a6215"}} {} {"status":500,"message":"Invalid number of parameters for \"transfer\". Got 1 expected 2!"} 2018-06-02T16:27:33+08:00 38ms
+
+[2018-06-02T16:43:28.909] [ERROR] error - error 2018-06-02T16:43:28+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":404,"message":"Method Not Allowed"} 2018-06-02T16:43:28+08:00 2ms
+
+[2018-06-02T16:43:52.963] [ERROR] error - error 2018-06-02T16:43:52+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Couldn't decode address from ABI: 0x"} 2018-06-02T16:43:52+08:00 undefinedms
+
+[2018-06-02T16:43:52.965] [ERROR] error - error 2018-06-02T16:43:52+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Couldn't decode address from ABI: 0x"} 2018-06-02T16:43:52+08:00 50ms
+
+[2018-06-02T16:44:40.413] [ERROR] error - error 2018-06-02T16:44:40+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Couldn't decode address from ABI: 0x"} 2018-06-02T16:44:40+08:00 undefinedms
+
+[2018-06-02T16:44:40.416] [ERROR] error - error 2018-06-02T16:44:40+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Couldn't decode address from ABI: 0x"} 2018-06-02T16:44:40+08:00 49ms
+
+[2018-06-02T16:53:00.326] [ERROR] error - error 2018-06-02T16:53:00+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Invalid number of parameters for \"owner\". Got 1 expected 0!"} 2018-06-02T16:53:00+08:00 undefinedms
+
+[2018-06-02T16:53:00.329] [ERROR] error - error 2018-06-02T16:53:00+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Invalid number of parameters for \"owner\". Got 1 expected 0!"} 2018-06-02T16:53:00+08:00 24ms
+
+[2018-06-02T16:53:26.779] [ERROR] error - error 2018-06-02T16:53:26+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Invalid number of parameters for \"owner\". Got 1 expected 0!"} 2018-06-02T16:53:26+08:00 undefinedms
+
+[2018-06-02T16:53:26.779] [ERROR] error - error 2018-06-02T16:53:26+08:00 GET /api/getOwnerAddress?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Invalid number of parameters for \"owner\". Got 1 expected 0!"} 2018-06-02T16:53:26+08:00 5ms
+
+[2018-06-02T18:40:00.290] [ERROR] error - error 2018-06-02T18:40:00+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":404,"message":"Please Input Password"} 2018-06-02T18:40:00+08:00 2ms
+
+[2018-06-02T18:41:20.363] [ERROR] error - error 2018-06-02T18:41:20+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":404,"message":"Please Input Password"} 2018-06-02T18:41:20+08:00 3ms
+
+[2018-06-02T18:51:31.534] [ERROR] error - error 2018-06-02T18:51:31+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":404,"message":"Please Input Password"} 2018-06-02T18:51:31+08:00 3ms
+
+[2018-06-02T18:52:23.567] [ERROR] error - error 2018-06-02T18:52:23+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":400,"message":"Please Input Password"} 2018-06-02T18:52:23+08:00 4ms
+
+[2018-06-02T18:52:59.777] [ERROR] error - error 2018-06-02T18:52:59+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":400,"message":"Please Input Password"} 2018-06-02T18:52:59+08:00 3ms
+
+[2018-06-02T18:53:24.155] [ERROR] error - error 2018-06-02T18:53:24+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":400,"message":"Please Input Password"} 2018-06-02T18:53:24+08:00 2ms
+
+[2018-06-02T18:53:53.672] [ERROR] error - error 2018-06-02T18:53:53+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":400,"message":"Please Input Password"} 2018-06-02T18:53:53+08:00 4ms
+
+[2018-06-02T18:54:11.194] [ERROR] error - error 2018-06-02T18:54:11+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":400,"message":"Please Input Password"} 2018-06-02T18:54:11+08:00 3ms
+
+[2018-06-02T18:54:50.397] [ERROR] error - error 2018-06-02T18:54:50+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {"result":"Please Input Password"} {"status":400,"message":"Please Input Salt"} 2018-06-02T18:54:50+08:00 4ms
+
+[2018-06-02T18:55:03.420] [ERROR] error - error 2018-06-02T18:55:03+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {"result":"Please Input Password"} {"status":400,"message":"Please Input Salt"} 2018-06-02T18:55:03+08:00 4ms
+
+[2018-06-02T18:59:56.457] [ERROR] error - error 2018-06-02T18:59:56+08:00 POST /api/transferFrom?coinName=UVS {"userId":""} {"coinName":"UVS"} {"data":{"fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","toAddress":"0x446cc2f95af27a663ca0cf28c9cb21dd335a6215","value":100,"password":"123123","salt":"PgZw63bxcZH9ubnffLPCJUzxutWqyZaCzMDZxbPPhis","encPrivKey":{"encStr":"Q+Tiqx4IRTSUAYGXQHrHdy77Lugrnk6/BH3Vs81YnQQ3WYMeTfWc6fJMWQC0982WPG0u5H1mhLwjQT5j58LSvGIvJicfy7QlYV1YUxu2a/1SZmJqUJj4","nonce":"ek+tWLz9Sivnzi62bk7xLV5u3j41k8Zf"}}} {} {"status":404,"message":"encrypt.deriveKeyFromPasswordAndSalt is not a function"} 2018-06-02T18:59:56+08:00 1ms
+

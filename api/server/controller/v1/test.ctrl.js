@@ -290,3 +290,51 @@ exports.transferFrom = async function(ctx) {
     throw new ApiError(ctx, 500, err.message);
   }
 };
+
+exports.transferOwnership = async function(ctx) {
+  try {
+    const coin = coins[ctx.query.coinName.toUpperCase()];
+    const body = ctx.request.body;
+    const contract = web3.getContract(coin.option.contractAddress, body.fromAddress);
+    const ethjsTxParams = {};
+    const gas = 300000;
+    const gasPrice = 3000000000;
+    const privateKey = new Buffer('949984efb71b88487074303688c50be7df1ba39dfed5c8fe57b0b3ea8a206f5b', 'hex');
+    const nonce = await web3.eth.getTransactionCount(body.fromAddress);
+    ethjsTxParams.from = encrypt.add0x(body.fromAddress);
+    ethjsTxParams.to = encrypt.add0x(coin.option.contractAddress);
+    ethjsTxParams.gasLimit = encrypt.add0x(gas);
+    ethjsTxParams.gasPrice = encrypt.add0x(gasPrice);
+    ethjsTxParams.nonce = nonce ? encrypt.add0x((nonce).toString(16)) : encrypt.add0x((0).toString(16));
+    ethjsTxParams.value = encrypt.add0x(0);
+    ethjsTxParams.data = contract.methods.transferOwnership(body.newOwnerAddress).encodeABI();
+    // 保持networkid 一致
+    ethjsTxParams.chainId = process.env.ETH_CHAINID || 10;
+
+    const tx = new Transaction(ethjsTxParams);
+    tx.sign(privateKey);
+
+    const serializedTx = tx.serialize();
+
+    const result = await web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'));
+    ctx.body = {
+      result
+    };
+  } catch (err) {
+    throw new ApiError(ctx, 500, err.message);
+  }
+};
+
+exports.getOwnerAddress = async function(ctx) {
+  try {
+    const coin = coins[ctx.query.coinName.toUpperCase()];
+    const contract = web3.getContract(coin.option.contractAddress, ctx.query.fromAddress);
+    const result = await contract.methods.owner().call();
+    console.log(result);
+    ctx.body = {
+      result
+    };
+  } catch (err) {
+    throw new ApiError(ctx, 500, err.message);
+  }
+};

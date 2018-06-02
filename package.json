@@ -49,7 +49,10 @@
 		"moment": "^2.18.1",
 		"promisify-call": "^2.0.4",
 		"random-int": "^1.0.0",
+		"scrypt-async": "^2.0.0",
 		"superagent": "^3.6.0",
+		"tweetnacl": "^1.0.0",
+		"tweetnacl-util": "^0.15.0",
 		"web3": "^1.0.0-beta.34"
 	},
 	"devDependencies": {}

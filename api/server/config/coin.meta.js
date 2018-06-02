@@ -6,7 +6,7 @@ module.exports = {
         "decimals": 18,
         "type": "ERC20",
         "option": {
-          "contractAddress": "0xcc057fa3e67e52bed4d0a0b8dd98e04c35667951",
+          "contractAddress": "0xb83201130f15d2c1adccd0df9a26a1ac25a1ed97",
         }
     },
 }
