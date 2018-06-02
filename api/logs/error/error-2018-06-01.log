@@ -1,0 +1,74 @@
+[2018-06-01T21:17:56.441] [ERROR] error - error 2018-06-01T21:17:56+08:00 POST /api/getBalance?coinName=UVS {"userId":""} {"coinName":"UVS"} {"data":{"contractAddress":"0x5627fba3d1cbaa51a3fcba6b0228f5011b2cefcf","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","decimals":18}} {} {"status":404,"message":"Method Not Allowed"} 2018-06-01T21:17:56+08:00 3ms
+
+[2018-06-01T21:18:12.267] [ERROR] error - error 2018-06-01T21:18:12+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:12+08:00 undefinedms
+
+[2018-06-01T21:18:12.267] [ERROR] error - error 2018-06-01T21:18:12+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:12+08:00 2ms
+
+[2018-06-01T21:18:27.413] [ERROR] error - error 2018-06-01T21:18:27+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:27+08:00 undefinedms
+
+[2018-06-01T21:18:27.417] [ERROR] error - error 2018-06-01T21:18:27+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:27+08:00 17ms
+
+[2018-06-01T21:18:53.273] [ERROR] error - error 2018-06-01T21:18:53+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:53+08:00 undefinedms
+
+[2018-06-01T21:18:53.276] [ERROR] error - error 2018-06-01T21:18:53+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:53+08:00 12ms
+
+[2018-06-01T21:18:59.309] [ERROR] error - error 2018-06-01T21:18:59+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:59+08:00 undefinedms
+
+[2018-06-01T21:18:59.312] [ERROR] error - error 2018-06-01T21:18:59+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:18:59+08:00 10ms
+
+[2018-06-01T21:19:00.204] [ERROR] error - error 2018-06-01T21:19:00+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:19:00+08:00 undefinedms
+
+[2018-06-01T21:19:00.204] [ERROR] error - error 2018-06-01T21:19:00+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:19:00+08:00 1ms
+
+[2018-06-01T21:19:11.450] [ERROR] error - error 2018-06-01T21:19:11+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:19:11+08:00 undefinedms
+
+[2018-06-01T21:19:11.453] [ERROR] error - error 2018-06-01T21:19:11+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:19:11+08:00 19ms
+
+[2018-06-01T21:19:36.749] [ERROR] error - error 2018-06-01T21:19:36+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:19:36+08:00 undefinedms
+
+[2018-06-01T21:19:36.752] [ERROR] error - error 2018-06-01T21:19:36+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:19:36+08:00 10ms
+
+[2018-06-01T21:19:50.727] [ERROR] error - error 2018-06-01T21:19:50+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:19:50+08:00 undefinedms
+
+[2018-06-01T21:19:50.729] [ERROR] error - error 2018-06-01T21:19:50+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:19:50+08:00 27ms
+
+[2018-06-01T21:20:05.081] [ERROR] error - error 2018-06-01T21:20:05+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:20:05+08:00 undefinedms
+
+[2018-06-01T21:20:05.084] [ERROR] error - error 2018-06-01T21:20:05+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:20:05+08:00 10ms
+
+[2018-06-01T21:20:13.658] [ERROR] error - error 2018-06-01T21:20:13+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:20:13+08:00 undefinedms
+
+[2018-06-01T21:20:13.661] [ERROR] error - error 2018-06-01T21:20:13+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:20:13+08:00 8ms
+
+[2018-06-01T21:22:27.138] [ERROR] error - error 2018-06-01T21:22:27+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:27+08:00 undefinedms
+
+[2018-06-01T21:22:27.140] [ERROR] error - error 2018-06-01T21:22:27+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:27+08:00 10ms
+
+[2018-06-01T21:22:35.920] [ERROR] error - error 2018-06-01T21:22:35+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:35+08:00 undefinedms
+
+[2018-06-01T21:22:35.923] [ERROR] error - error 2018-06-01T21:22:35+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:35+08:00 10ms
+
+[2018-06-01T21:22:42.527] [ERROR] error - error 2018-06-01T21:22:42+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:42+08:00 undefinedms
+
+[2018-06-01T21:22:42.529] [ERROR] error - error 2018-06-01T21:22:42+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'coinName' of undefined"} 2018-06-01T21:22:42+08:00 13ms
+
+[2018-06-01T21:23:09.295] [ERROR] error - error 2018-06-01T21:23:09+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:09+08:00 undefinedms
+
+[2018-06-01T21:23:09.299] [ERROR] error - error 2018-06-01T21:23:09+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:09+08:00 12ms
+
+[2018-06-01T21:23:24.589] [ERROR] error - error 2018-06-01T21:23:24+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:24+08:00 undefinedms
+
+[2018-06-01T21:23:24.592] [ERROR] error - error 2018-06-01T21:23:24+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:24+08:00 10ms
+
+[2018-06-01T21:23:37.028] [ERROR] error - error 2018-06-01T21:23:37+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:37+08:00 undefinedms
+
+[2018-06-01T21:23:37.031] [ERROR] error - error 2018-06-01T21:23:37+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"Cannot read property 'option' of undefined"} 2018-06-01T21:23:37+08:00 12ms
+
+[2018-06-01T21:24:54.868] [ERROR] error - error 2018-06-01T21:24:54+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"couts is not defined"} 2018-06-01T21:24:54+08:00 undefinedms
+
+[2018-06-01T21:24:54.870] [ERROR] error - error 2018-06-01T21:24:54+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"couts is not defined"} 2018-06-01T21:24:54+08:00 39ms
+
+[2018-06-01T21:25:17.663] [ERROR] error - error 2018-06-01T21:25:17+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"couts is not defined"} 2018-06-01T21:25:17+08:00 undefinedms
+
+[2018-06-01T21:25:17.665] [ERROR] error - error 2018-06-01T21:25:17+08:00 GET /api/getBalance?coinName=UVS&fromAddress=0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8 {"userId":""} {"coinName":"UVS","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8"} {"data":{}} {} {"status":500,"message":"couts is not defined"} 2018-06-01T21:25:17+08:00 48ms
+

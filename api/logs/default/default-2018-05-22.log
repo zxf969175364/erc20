@@ -1,0 +1,16 @@
+[2018-05-22T03:09:37.587] [INFO] default - info 2018-05-22T03:09:37+08:00 POST /api/v1/users/getBalance {"userId":""} {} {"data":{"contractAddress":"0xd65341b38c4f21237f217b8dabd59e7a4166e69b","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","decimals":18}} {"result":{"counts":10000000000000000000}} {"status":200} 2018-05-22T03:09:37+08:00 54ms
+
+[2018-05-22T03:21:58.092] [INFO] default - info 2018-05-22T03:21:58+08:00 POST /api/getBalance {"userId":""} {} {"data":{"contractAddress":"0xd65341b38c4f21237f217b8dabd59e7a4166e69b","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","decimals":18}} {"result":{"counts":10000000000000000000}} {"status":200} 2018-05-22T03:21:58+08:00 43ms
+
+[2018-05-22T03:29:48.121] [INFO] default - info 2018-05-22T03:29:48+08:00 POST /api/getBalance {"userId":""} {} {"data":{"contractAddress":"0x5627fba3d1cbaa51a3fcba6b0228f5011b2cefcf","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","decimals":18}} {"result":{"counts":66666666}} {"status":200} 2018-05-22T03:29:48+08:00 14ms
+
+[2018-05-22T04:20:42.982] [INFO] default - info 2018-05-22T04:20:42+08:00 GET /api/test {"userId":""} {} {"data":{}} {"result":{"contract":{"type":"Buffer","data":[148,153,132,239,183,27,136,72,112,116,48,54,136,197,11,231,223,27,163,157,254,213,200,254,87,176,179,234,138,32,111,91]}}} {"status":200} 2018-05-22T04:20:42+08:00 6882ms
+
+[2018-05-22T04:21:18.200] [INFO] default - info 2018-05-22T04:21:18+08:00 GET /api/test {"userId":""} {} {"data":{}} {"result":{}} {"status":200} 2018-05-22T04:21:18+08:00 6499ms
+
+[2018-05-22T04:23:08.886] [INFO] default - info 2018-05-22T04:23:08+08:00 GET /api/test {"userId":""} {} {"data":{}} {"result":{}} {"status":200} 2018-05-22T04:23:08+08:00 6475ms
+
+[2018-05-22T04:27:19.457] [INFO] default - info 2018-05-22T04:27:19+08:00 POST /api/getBalance {"userId":""} {} {"data":{"contractAddress":"0x5627fba3d1cbaa51a3fcba6b0228f5011b2cefcf","fromAddress":"0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8","decimals":18}} {"result":{"counts":66666656}} {"status":200} 2018-05-22T04:27:19+08:00 34ms
+
+[2018-05-22T04:27:24.347] [INFO] default - info 2018-05-22T04:27:24+08:00 POST /api/getBalance {"userId":""} {} {"data":{"contractAddress":"0x5627fba3d1cbaa51a3fcba6b0228f5011b2cefcf","fromAddress":"0x446cc2f95af27a663ca0cf28c9cb21dd335a6215","decimals":18}} {"result":{"counts":10}} {"status":200} 2018-05-22T04:27:24+08:00 7ms
+
