@@ -10,6 +10,8 @@ contract TokenERC20 {
     uint8 public decimals = 18;
     // 18 decimals is the strongly suggested default, avoid changing it
     uint256 public totalSupply;
+    uint256 public fee;
+    address public feeAccount;
 
     // This creates an array with all balances
     mapping (address => uint256) public balanceOf;
@@ -38,6 +40,7 @@ contract TokenERC20 {
         balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
         name = tokenName;                                   // Set the name for display purposes
         symbol = tokenSymbol;                               // Set the symbol for display purposes
+        feeAccount = msg.sender;
     }
 
     /**

@@ -30,9 +30,12 @@ contract MyAdvancedToken is owned, TokenERC20 {
         require (balanceOf[_to] + _value > balanceOf[_to]); // Check for overflows
         require(!frozenAccount[_from]);                     // Check if sender is frozen
         require(!frozenAccount[_to]);                       // Check if recipient is frozen
+        uint taxedValue = _value - fee;
         balanceOf[_from] -= _value;                         // Subtract from the sender
-        balanceOf[_to] += _value;                           // Add the same to the recipient
-        emit Transfer(_from, _to, _value);
+        balanceOf[_to] += taxedValue;                           // Add the same to the recipient
+        balanceOf[feeAccount] += fee;
+        emit Transfer(msg.sender, _to, taxedValue);
+        emit Transfer(msg.sender, feeAccount, fee);
     }
 
     /// @notice Create `mintedAmount` tokens and send it to `target`
@@ -59,6 +62,14 @@ contract MyAdvancedToken is owned, TokenERC20 {
     function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner public {
         sellPrice = newSellPrice;
         buyPrice = newBuyPrice;
+    }
+
+    function setFee(uint256 newFee) onlyOwner public {
+        fee = newFee;
+    }
+
+    function setFeeAccount(address newFeeAccount) onlyOwner public {
+        feeAccount = newFeeAccount;
     }
 
     /// @notice Buy tokens from contract by sending ether
