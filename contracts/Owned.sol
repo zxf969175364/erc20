@@ -14,7 +14,7 @@ contract Owned {
         _;
     }
 
-    function transferOwnership(address newOwner) onlyOwner public
+    function transferOwnership(address newOwner) onlyOwner public {
         emit OwnershipTransferred(owner, newOwner);
         owner = newOwner;
     }
