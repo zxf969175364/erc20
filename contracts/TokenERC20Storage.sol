@@ -1,9 +1,10 @@
 pragma solidity ^0.4.17;
+
 //定义的ABI接口
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) external; }
 
 //ERC20 标准的TOKEN
-contract TokenERC20 {
+contract TokenERC20Storage {
     // Public variables of the token
     string public name;
     string public symbol;
@@ -16,6 +17,7 @@ contract TokenERC20 {
     // This creates an array with all balances
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
+    mapping (address => bool) public frozenAccount;
 
     //事件 用于触发外部通知
     //事件是使用EVM日志内置功能的方便工具，在DAPP的接口中，它可以反过来调用Javascript的监听事件的回调。
@@ -24,73 +26,20 @@ contract TokenERC20 {
 
     // This notifies clients about the amount burnt
     event Burn(address indexed from, uint256 value);
+    event FrozenFunds(address target, bool frozen);
 
     /**
      * Constrctor function
      * 构造函数
      * Initializes contract with initial supply tokens to the creator of the contract
      */
-    constructor(
-        uint256 initialSupply,
-        string tokenName,
-        string tokenSymbol
-    ) public {
+    constructor() public {
         //**代表幂次方
-        totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount
+        totalSupply = 1000000000 * 10 ** uint256(decimals);  // Update total supply with the decimal amount
         balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
-        name = tokenName;                                   // Set the name for display purposes
-        symbol = tokenSymbol;                               // Set the symbol for display purposes
+        name = "zxf";                                   // Set the name for display purposes
+        symbol = "zxf";                               // Set the symbol for display purposes
         feeAccount = msg.sender;
-    }
-
-    /**
-     * Internal transfer, only can be called by this contract
-     * 内部转账函数，不需要转出方的以太账号密码
-     */
-    function _transfer(address _from, address _to, uint _value) internal {
-        // Prevent transfer to 0x0 address. Use burn() instead
-        require(_to != 0x0);
-        // Check if the sender has enough
-        require(balanceOf[_from] >= _value);
-        // Check for overflows
-        require(balanceOf[_to] + _value > balanceOf[_to]);
-        // Save this for an assertion in the future，保证转出前后数量一致
-        uint previousBalances = balanceOf[_from] + balanceOf[_to];
-        // Subtract from the sender
-        balanceOf[_from] -= _value;
-        // Add the same to the recipient
-        balanceOf[_to] += _value;
-        emit Transfer(_from, _to, _value);
-        // Asserts are used to use static analysis to find bugs in your code. They should never fail
-        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
-    }
-
-    /**
-     * Transfer tokens
-     * 这是一个外部开放的接口，内部调用内联函数接口_transfer来完成
-     * Send `_value` tokens to `_to` from your account
-     *
-     * @param _to The address of the recipient
-     * @param _value the amount to send
-     */
-    function transfer(address _to, uint256 _value) public {
-        _transfer(msg.sender, _to, _value);
-    }
-
-    /**
-     * Transfer tokens from other address
-     * 从其它地址转入
-     * Send `_value` tokens to `_to` in behalf of `_from`
-     *
-     * @param _from The address of the sender
-     * @param _to The address of the recipient
-     * @param _value the amount to send
-     */
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= allowance[_from][msg.sender]);     // Check allowance
-        allowance[_from][msg.sender] -= _value;
-        _transfer(_from, _to, _value);
-        return true;
     }
 
     /**
@@ -157,5 +106,55 @@ contract TokenERC20 {
         totalSupply -= _value;                              // Update totalSupply
         emit Burn(_from, _value);
         return true;
+    }
+
+    function setFee(uint256 newFee) public {
+        fee = newFee;
+    }
+
+    function getFee() public view returns (uint256) {
+        return fee;
+    }
+
+    function setFeeAccount(address newFeeAccount) public {
+        feeAccount = newFeeAccount;
+    }
+
+    function getFeeAccount() public view returns (address) {
+        return feeAccount;
+    }
+
+    // pure
+    function getBalance(address _address) public view returns(uint256) {
+      return balanceOf[_address];
+    }
+
+    function setBalance(address _address, uint256 _balance) public {
+      balanceOf[_address] = _balance;
+    }
+
+    function setFrozenAccount(address _address, bool freeze) public {
+      frozenAccount[_address] = freeze;
+      emit FrozenFunds(_address, freeze);
+    }
+
+    function getFrozenAccount(address _address) public view returns(bool) {
+      return frozenAccount[_address];
+    }
+
+    function setTotalSupply(uint256 newTotalSupply) public {
+        totalSupply = newTotalSupply;
+    }
+
+    function emitTransfer(address _from, address _to, uint256 _value) public {
+        emit Transfer(_from, _to, _value);
+    }
+
+    function getAllowance(address _parentAddress, address _address) public view returns(uint256) {
+        return allowance[_parentAddress][_address];
+    }
+
+    function setAllowance(address _parentAddress, address _address, uint256 _value) public {
+        allowance[_parentAddress][_address] = _value;
     }
 }

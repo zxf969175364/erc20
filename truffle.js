@@ -6,7 +6,7 @@ module.exports = {
       network_id: '*', // Match any network id
       gas: 4700000,
       gasPrice: 65000000000,
-      from: '0xd03fc73d0b3b96f1e12b97c92dc0651c9ee1ccf8',
+      from: '0x8241d108372b20e35586e57ac4cdaeb8e3869892',
     },
     // rinkeby: {
     //     host: 'localhost',

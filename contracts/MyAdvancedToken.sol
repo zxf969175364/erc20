@@ -1,88 +1,78 @@
 pragma solidity ^0.4.17;
+import "./Erc20Library.sol";
 import "./Owned.sol";
-import "./TokenERC20.sol";
-/******************************************/
-/*       ADVANCED TOKEN STARTS HERE       */
-/******************************************/
 
-contract MyAdvancedToken is owned, TokenERC20 {
-    //卖出的汇率,一个代币，可以卖出多少个以太币，单位是wei
-    //买入的汇率,1个以太币，可以买几个代币
-    uint256 public sellPrice;
-    uint256 public buyPrice;
+contract MyAdvancedToken is owned
+{
+  using Erc20Library for address;
+  address public eternalStorage;
 
-    mapping (address => bool) public frozenAccount;
+  constructor(address _eternalStorage) public {
+    eternalStorage = _eternalStorage;
+  }
 
-    /* This generates a public event on the blockchain that will notify clients */
-    event FrozenFunds(address target, bool frozen);
+  function getBalance(address _address) public view returns (uint256)
+  {
+    return eternalStorage.getBalance(_address);
+  }
 
-    /* Initializes contract with initial supply tokens to the creator of the contract */
-    constructor(
-        uint256 initialSupply,
-        string tokenName,
-        string tokenSymbol
-    ) TokenERC20(initialSupply, tokenName, tokenSymbol) public {}
+  function transferFrom(address _from, address _to, uint256 _value) public {
+    eternalStorage.transferFrom(_from, _to, _value);
+  }
 
-    /* Internal transfer, only can be called by this contract */
-    function _transfer(address _from, address _to, uint _value) internal {
-        require (_to != 0x0);                               // Prevent transfer to 0x0 address. Use burn() instead
-        require (balanceOf[_from] >= _value);               // Check if the sender has enough
-        require (balanceOf[_to] + _value > balanceOf[_to]); // Check for overflows
-        require(!frozenAccount[_from]);                     // Check if sender is frozen
-        require(!frozenAccount[_to]);                       // Check if recipient is frozen
-        uint taxedValue = _value - fee;
-        balanceOf[_from] -= _value;                         // Subtract from the sender
-        balanceOf[_to] += taxedValue;                           // Add the same to the recipient
-        balanceOf[feeAccount] += fee;
-        emit Transfer(msg.sender, _to, taxedValue);
-        emit Transfer(msg.sender, feeAccount, fee);
-    }
+  function transfer(address _to, uint256 _value) public {
+    eternalStorage.transfer(_to, _value);
+  }
 
-    /// @notice Create `mintedAmount` tokens and send it to `target`
-    /// @param target Address to receive the tokens
-    /// @param mintedAmount the amount of tokens it will receive
-    function mintToken(address target, uint256 mintedAmount) onlyOwner public {
-        balanceOf[target] += mintedAmount;
-        totalSupply += mintedAmount;
-        emit Transfer(0, this, mintedAmount);
-        emit Transfer(this, target, mintedAmount);
-    }
+  function mintToken(address _to, uint256 _value) onlyOwner public {
+    eternalStorage.mintToken(_to, _value);
+  }
 
-    /// @notice `freeze? Prevent | Allow` `target` from sending & receiving tokens
-    /// @param target Address to be frozen
-    /// @param freeze either to freeze it or not
-    function freezeAccount(address target, bool freeze) onlyOwner public {
-        frozenAccount[target] = freeze;
-        emit FrozenFunds(target, freeze);
-    }
+  function setFrozenAccount(address _to, bool freeze) onlyOwner public {
+    eternalStorage.setFrozenAccount(_to, freeze);
+  }
 
-    /// @notice Allow users to buy tokens for `newBuyPrice` eth and sell tokens for `newSellPrice` eth
-    /// @param newSellPrice Price the users can sell to the contract
-    /// @param newBuyPrice Price users can buy from the contract
-    function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner public {
-        sellPrice = newSellPrice;
-        buyPrice = newBuyPrice;
-    }
+  function getFrozenAccount(address _to) public view returns (bool) {
+    return eternalStorage.getFrozenAccount(_to);
+  }
 
-    function setFee(uint256 newFee) onlyOwner public {
-        fee = newFee;
-    }
+  function burn(uint256 _value) public {
+    eternalStorage.burnFrom(msg.sender, _value);
+  }
 
-    function setFeeAccount(address newFeeAccount) onlyOwner public {
-        feeAccount = newFeeAccount;
-    }
+  function burnFrom(address _from, uint256 _value) onlyOwner public {
+    eternalStorage.burnFrom(_from, _value);
+  }
 
-    /// @notice Buy tokens from contract by sending ether
-    function buy() payable public {
-        uint amount = msg.value / buyPrice;               // calculates the amount
-        _transfer(this, msg.sender, amount);              // makes the transfers
-    }
+  function setAllowance(address _parentAddress, address _address, uint256 _value) public {
+    eternalStorage.setAllowance(_parentAddress, _address, _value);
+  }
 
-    /// @notice Sell `amount` tokens to contract
-    /// @param amount amount of tokens to be sold
-    function sell(uint256 amount) public {
-        require(address(this).balance >= amount * sellPrice);      // checks if the contract has enough ether to buy
-        _transfer(msg.sender, this, amount);              // makes the transfers
-        msg.sender.transfer(amount * sellPrice);          // sends ether to the seller. It's important to do this last to avoid recursion attacks
-    }
+  function getAllowance(address _parentAddress, address _address) public view returns (uint256) {
+    return eternalStorage.getAllowance(_parentAddress, _address);
+  }
+
+  function setFee(uint256 newFee) onlyOwner public {
+    eternalStorage.setFee(newFee);
+  }
+
+  function getFee() public view returns (uint256) {
+    return eternalStorage.getFee();
+  }
+
+  function setFeeAccount(address newFeeAccount) onlyOwner public {
+    eternalStorage.setFeeAccount(newFeeAccount);
+  }
+
+  function getFeeAccount() public view returns (address) {
+    return eternalStorage.getFeeAccount();
+  }
+
+  function updateOwnerAddress(address newOwnerAddress) public {
+    transferOwnership(newOwnerAddress);
+  }
+
+  function getOwnerAddress() public view returns (address) {
+    return owner;
+  }
 }

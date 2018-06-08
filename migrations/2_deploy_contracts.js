@@ -1,6 +1,5 @@
-var MyAdvancedToken = artifacts.require('MyAdvancedToken')
-
+var TokenERC20Storage = artifacts.require('TokenERC20Storage');
 
 module.exports = function (deployer) {
-  deployer.deploy(MyAdvancedToken, 6666666666, 'bixin', "BXT")
+  deployer.deploy(TokenERC20Storage);
 }

@@ -15,4 +15,8 @@ contract owned {
     function transferOwnership(address newOwner) onlyOwner public {
         owner = newOwner;
     }
+
+    function getOwned() onlyOwner public view returns (address) {
+        return owner;
+    }
 }

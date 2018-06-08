@@ -29,7 +29,7 @@ function decryptPassword() {
     };
 
     ctx.user = {
-      privKey: encrypt.decryptString(body.encPrivKey, pwDerivedKey)
+      privateKey: encrypt.decryptString(body.encPrivKey, pwDerivedKey)
     };
     await next();
   };
