@@ -23,5 +23,7 @@ router.post('/api/fee', decrypt.decryptPassword(), testCtrl.setFee);
 router.get('/api/fee', testCtrl.getFee);
 router.post('/api/feeAccount', decrypt.decryptPassword(), testCtrl.setFeeAccount);
 router.get('/api/feeAccount', testCtrl.getFeeAccount);
+router.post('/api/maxTransferNum', decrypt.decryptPassword(), testCtrl.setMaxTransferNum);
+router.get('/api/maxTransferNum', testCtrl.getMaxTransferNum);
 
 module.exports = router;

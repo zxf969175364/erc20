@@ -119,6 +119,34 @@ const abiArray = [
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMaxTransferNum",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newMaxTransferNum",
+				"type": "uint256"
+			}
+		],
+		"name": "setMaxTransferNum",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
@@ -235,6 +263,25 @@ const abiArray = [
 	},
 	{
 		"constant": true,
+		"inputs": [
+			{
+				"name": "key_",
+				"type": "bytes32"
+			}
+		],
+		"name": "getTokenERC20",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [],
 		"name": "getFee",
 		"outputs": [
@@ -245,6 +292,24 @@ const abiArray = [
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "key_",
+				"type": "bytes32"
+			},
+			{
+				"name": "_address",
+				"type": "address"
+			},
+		],
+		"name": "registerTokenERC20",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{

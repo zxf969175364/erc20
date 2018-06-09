@@ -218,7 +218,7 @@ exports.getOwnerAddress = async function(ctx) {
 exports.setAllowance = async function(ctx) {
   try {
     const coin = coins[ctx.query.coinName.toUpperCase()];
-    const result = await sendSign(coin, ctx, 'setAllowance', [ctx.request.body.parentAddress, ctx.request.body.adddress, ctx.request.body.value]);
+    const result = await sendSign(coin, ctx, 'setAllowance', [ctx.request.body.parentAddress, ctx.request.body.address, utils.toWei(ctx.request.body.value, coin.decimals).toString()]);
     ctx.body = {
       result
     };
@@ -231,9 +231,10 @@ exports.getAllowance = async function(ctx) {
   try {
     const coin = coins[ctx.query.coinName.toUpperCase()];
     const contract = web3.getContract(coin.option.contractAddress, ctx.query.fromAddress);
-    const result = await contract.methods.getAllowance(ctx.request.body.parentAddress, ctx.request.body.adddress).call();
+    let counts = await contract.methods.getAllowance(ctx.query.parentAddress, ctx.query.address).call();
+    counts = utils.fromWei(counts, coin.decimals);
     ctx.body = {
-      result
+      counts
     };
   } catch (err) {
     throw new ApiError(ctx, 500, err.message);
@@ -285,6 +286,32 @@ exports.getFeeAccount = async function(ctx) {
     const result = await contract.methods.getFeeAccount().call();
     ctx.body = {
       result
+    };
+  } catch (err) {
+    throw new ApiError(ctx, 500, err.message);
+  }
+};
+
+exports.setMaxTransferNum = async function(ctx) {
+  try {
+    const coin = coins[ctx.query.coinName.toUpperCase()];
+    const result = await sendSign(coin, ctx, 'setMaxTransferNum', [utils.toWei(ctx.request.body.value, coin.decimals).toString()]);
+    ctx.body = {
+      result
+    };
+  } catch (err) {
+    throw new ApiError(ctx, 500, err.message);
+  }
+};
+
+exports.getMaxTransferNum = async function(ctx) {
+  try {
+    const coin = coins[ctx.query.coinName.toUpperCase()];
+    const contract = web3.getContract(coin.option.contractAddress, ctx.query.fromAddress);
+    let counts = await contract.methods.getMaxTransferNum().call();
+    counts = utils.fromWei(counts, coin.decimals);
+    ctx.body = {
+      counts
     };
   } catch (err) {
     throw new ApiError(ctx, 500, err.message);

@@ -13,6 +13,7 @@ contract TokenERC20Storage {
     uint256 public totalSupply;
     uint256 public fee;
     address public feeAccount;
+    uint256 public maxTransferNum;
 
     // This creates an array with all balances
     mapping (address => uint256) public balanceOf;
@@ -156,5 +157,13 @@ contract TokenERC20Storage {
 
     function setAllowance(address _parentAddress, address _address, uint256 _value) public {
         allowance[_parentAddress][_address] = _value;
+    }
+
+    function getMaxTransferNum() public view returns(uint256) {
+        return maxTransferNum;
+    }
+
+    function setMaxTransferNum(uint256 newMaxTransferNum) public {
+        maxTransferNum = newMaxTransferNum;
     }
 }

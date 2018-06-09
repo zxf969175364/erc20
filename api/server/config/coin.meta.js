@@ -6,7 +6,7 @@ module.exports = {
         "decimals": 18,
         "type": "ERC20",
         "option": {
-          "contractAddress": "0x8ddaefaa0e3932d539294c9a91fa0118c7fc1055",
+          "contractAddress": "0xa5c3b95ec9c290b6a59c0fa65b0ba3e5b49da8c6",
         }
     },
     "PARENT": {
@@ -15,7 +15,7 @@ module.exports = {
         "symbol": "PARENT",
         "type": "ERC20",
         "option": {
-          "contractAddress": "0x7df2697655cc8c792ba498b6765b416e29f39e40",
+          "contractAddress": "0xfd8109765ec4b98c80d1be5da1e84095c6ef4bbf",
         }
     },
 }

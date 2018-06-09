@@ -75,4 +75,12 @@ contract MyAdvancedToken is owned
   function getOwnerAddress() public view returns (address) {
     return owner;
   }
+
+  function getMaxTransferNum() public view returns (uint256) {
+    return eternalStorage.getMaxTransferNum();
+  }
+
+  function setMaxTransferNum(uint256 newMaxTransferNum) onlyOwner public {
+    eternalStorage.setMaxTransferNum(newMaxTransferNum);
+  }
 }
