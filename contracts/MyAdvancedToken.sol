@@ -44,8 +44,8 @@ contract MyAdvancedToken is owned
     eternalStorage.burnFrom(_from, _value);
   }
 
-  function setAllowance(address _parentAddress, address _address, uint256 _value) public {
-    eternalStorage.setAllowance(_parentAddress, _address, _value);
+  function setAllowance(address _address, uint256 _value) public {
+    eternalStorage.setAllowance(msg.sender, _address, _value);
   }
 
   function getAllowance(address _parentAddress, address _address) public view returns (uint256) {

@@ -11,8 +11,6 @@ library Erc20Library {
   function _transfer(address _storageContract, address _from, address _to, uint256 _value) private {
     TokenERC20Storage data = TokenERC20Storage(_storageContract);
     require(_value <= data.getMaxTransferNum());
-    require(_value <= data.getAllowance(_from, msg.sender));
-    data.setAllowance(_from, msg.sender, (data.getAllowance(_from, msg.sender) - _value));
     require(_to != 0x0);
     require(data.getBalance(_from) >= _value);
     require(data.getBalance(_to) + _value > data.getBalance(_to));
@@ -34,6 +32,9 @@ library Erc20Library {
   }
 
   function transferFrom(address _storageContract, address _from, address _to, uint256 _value) public {
+    TokenERC20Storage data = TokenERC20Storage(_storageContract);
+    require(_value <= data.getAllowance(_from, msg.sender));
+    data.setAllowance(_from, msg.sender, (data.getAllowance(_from, msg.sender) - _value));
     _transfer(_storageContract, _from, _to, _value);
   }
 

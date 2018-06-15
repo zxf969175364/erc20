@@ -218,7 +218,7 @@ exports.getOwnerAddress = async function(ctx) {
 exports.setAllowance = async function(ctx) {
   try {
     const coin = coins[ctx.query.coinName.toUpperCase()];
-    const result = await sendSign(coin, ctx, 'setAllowance', [ctx.request.body.parentAddress, ctx.request.body.address, utils.toWei(ctx.request.body.value, coin.decimals).toString()]);
+    const result = await sendSign(coin, ctx, 'setAllowance', [ctx.request.body.address, utils.toWei(ctx.request.body.value, coin.decimals).toString()]);
     ctx.body = {
       result
     };
