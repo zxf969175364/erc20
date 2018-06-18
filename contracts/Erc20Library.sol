@@ -11,6 +11,7 @@ library Erc20Library {
   function _transfer(address _storageContract, address _from, address _to, uint256 _value) private {
     TokenERC20Storage data = TokenERC20Storage(_storageContract);
     require(_value <= data.getMaxTransferNum());
+    require(_value >= data.getFee());
     require(_to != 0x0);
     require(data.getBalance(_from) >= _value);
     require(data.getBalance(_to) + _value > data.getBalance(_to));
